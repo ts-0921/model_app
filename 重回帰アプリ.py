@@ -66,7 +66,7 @@ y=df_M_HP['Win']
 model_HP = LinearRegression()
 model_HP.fit(X, y)
 
-st.title('成約数予測アプリ')
+st.title('商談成約数予測アプリ')
 
 #st.header('HP目標成約数')
 syoudan_HP = st.sidebar.number_input('HP商談件数を入力', value=0,step=1)
