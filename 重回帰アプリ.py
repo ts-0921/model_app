@@ -69,8 +69,8 @@ model_HP.fit(X, y)
 st.title('成約数予測アプリ')
 
 #st.header('HP目標成約数')
-syoudan_HP = st.sidebar.number_input('HP商談件数を入力', value=0.0)
-ninzu_HP = st.sidebar.number_input('HP営業所人数を入力', value=0.0)
+syoudan_HP = st.sidebar.number_input('HP商談件数を入力', value=0,step=1)
+ninzu_HP = st.sidebar.number_input('HP営業所人数を入力', value=0,step=1)
 
 pred_HP=model_HP.predict([[syoudan_HP,ninzu_HP]])
 st.header(f'HP 目標成約数: {round(pred_HP[0])}')
@@ -78,8 +78,8 @@ st.header(f'HP 目標成約数: {round(pred_HP[0])}')
 
 
 #st.header('GP目標成約数')
-syoudan_GP = st.sidebar.number_input('GP商談件数を入力', value=0.0)
-ninzu_GP = st.sidebar.number_input('GP営業所人数を入力', value=0.0)
+syoudan_GP = st.sidebar.number_input('GP商談件数を入力', value=0,step=1)
+ninzu_GP = st.sidebar.number_input('GP営業所人数を入力', value=0,step=1)
 
 pred_GP=model_GP.predict([[syoudan_GP,ninzu_GP]])
 st.header(f'GP 目標成約数: {round(pred_GP[0])}')
